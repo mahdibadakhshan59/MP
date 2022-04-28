@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MusicPlayer</title>
+    <link rel="stylesheet" href="./MusicPlayer.css" />
+    <link rel="stylesheet" href="./PoppinsFont/Font.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"/>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.2/Sortable.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="menu-side">
+        <h1>
+          Playlist<i
+            id="left-scroll"
+            class="bi closePlaylist bi-arrow-left-short"
+          ></i>
+        </h1>
+        <div class="playlist">
+          <h4 class="active">
+            <span></span><i class="bi bi-music-note-beamed"></i> Playlist
+          </h4>
+          <h4>
+            <span></span><i class="bi bi-music-note-beamed"></i> Last Listening
+          </h4>
+          <h4>
+            <span></span><i class="bi bi-music-note-beamed"></i> Recommended
+          </h4>
+        </div>
+        <div class="menu-song">
+          <li class="songItem">
+            <span>01</span>
+            <img src="./Image/1.jpg" alt="Song" />
+            <h5>
+              Mehro Mah
+              <div class="subtitle">Esfahani</div>
+            </h5>
+            <i class="bi playlistPlay bi-play-circle-fill" id="1"></i>
+          </li>
+          <li class="songItem">
+            <span>02</span>
+            <img src="./Image/2.jpg" alt="Song" />
+            <h5>
+              Gol
+              <div class="subtitle">Alizadeh</div>
+            </h5>
+            <i class="bi playlistPlay bi-play-circle-fill" id="2"></i>
+          </li>
+          <li class="songItem">
+            <span>03</span>
+            <img src="./Image/3.jpg" alt="Song" />
+            <h5>
+              Arezoo
+              <div class="subtitle">Mehraj</div>
+            </h5>
+            <i class="bi playlistPlay bi-play-circle-fill" id="3"></i>
+          </li>
+          <li class="songItem">
+            <span>04</span>
+            <img src="./Image/4.jpg" alt="Song" />
+            <h5>
+              Aram Aram
+              <div class="subtitle">Malek Zadeh</div>
+            </h5>
+            <i class="bi playlistPlay bi-play-circle-fill" id="4"></i>
+          </li>
+          <li class="songItem">
+            <span>05</span>
+            <img src="./Image/5.jpg" alt="Song" />
+            <h5>
+              Mahi Kenare Rood
+              <div class="subtitle">Chavoshi</div>
+            </h5>
+            <i class="bi playlistPlay bi-play-circle-fill" id="5"></i>
+          </li>
+          <li class="songItem">
+            <span>06</span>
+            <img src="./Image/6.jpg" alt="Song" />
+            <h5>
+              Sarmast
+              <div class="subtitle">Tavakoli</div>
+            </h5>
+            <i class="bi playlistPlay bi-play-circle-fill" id="6"></i>
+          </li>
+          <li class="songItem">
+            <span>07</span>
+            <img src="./Image/7.jpg" alt="Song" />
+            <h5>
+              Shirin Bi Farhad
+              <div class="subtitle">Nasri</div>
+            </h5>
+            <i class="bi playlistPlay bi-play-circle-fill" id="7"></i>
+          </li>
+          <li class="songItem">
+            <span>08</span>
+            <img src="./Image/8.jpg" alt="Song" />
+            <h5>
+              Mahe Bi Tekrare Man
+              <div class="subtitle">Ashraf Zadeh</div>
+            </h5>
+            <i class="bi playlistPlay bi-play-circle-fill" id="8"></i>
+          </li>
+          <li class="songItem">
+            <span>09</span>
+            <img src="./Image/9.jpg" alt="Song" />
+            <h5>
+              Raze Del
+              <div class="subtitle">Shahraki</div>
+            </h5>
+            <i class="bi playlistPlay bi-play-circle-fill" id="9"></i>
+          </li>
+          <li class="songItem">
+            <span>10</span>
+            <img src="./Image/10.jpg" alt="Song" />
+            <h5>
+              Fasle Parishani
+              <div class="subtitle">Zand Vakili</div>
+            </h5>
+            <i class="bi playlistPlay bi-play-circle-fill" id="10"></i>
+          </li>
+        </div>
+      </div>
+
+      <div class="song-side">
+        <nav>
+          <ul>
+            <li class="showPlaylist"><i class="bi bi-list"></i></li>
+            <li>Discover<span></span></li>
+            <li>MY LIBRARY</li>
+            <li>RADIO</li>
+          </ul>
+          <div class="search">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Search..." />
+          </div>
+          <div class="user" onclick="toggleTheme()">
+            <!-- <img src="./Image/2.jpg" alt="User" title="59" /> -->
+            <i class="bi sun bi-sun-fill"></i>
+          </div>
+        </nav>
+        <div class="content">
+          <h1>Music Player</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta,
+            repudiandae?
+            <br />
+            Amet quae recusandae atque consectetur distinctio quisquam!
+          </p>
+          <div class="buttons">
+            <button>PLAY</button>
+            <button>FOLLOW</button>
+          </div>
+        </div>
+        <div class="popular-song">
+          <div class="h4">
+            <h4>Popular Song</h4>
+            <div class="btn-s">
+              <i id="left_scroll" class="bi bi-arrow-left-short"></i>
+              <i id="right_scroll" class="bi bi-arrow-right-short"></i>
+            </div>
+          </div>
+          <div class="pop-song">
+            <li class="songItem">
+              <div class="img-play">
+                <img src="./Image/11.jpg" alt="Song" />
+                <i class="bi playlistPlay bi-play-circle-fill" id="11"></i>
+              </div>
+              <h5>
+                Sari Galin
+                <br />
+                <div class="subtitle">Alizadeh</div>
+              </h5>
+            </li>
+            <li class="songItem">
+              <div class="img-play">
+                <img src="./Image/12.jpg" alt="Song" />
+                <i class="bi playlistPlay bi-play-circle-fill" id="12"></i>
+              </div>
+              <h5>
+                Babe Delami
+                <br />
+                <div class="subtitle">Chavoshi</div>
+              </h5>
+            </li>
+            <li class="songItem">
+              <div class="img-play">
+                <img src="./Image/13.jpg" alt="Song" />
+                <i class="bi playlistPlay bi-play-circle-fill" id="13"></i>
+              </div>
+              <h5>
+                Zakhm
+                <br />
+                <div class="subtitle">AlizaDeh</div>
+              </h5>
+            </li>
+            <li class="songItem">
+              <div class="img-play">
+                <img src="./Image/14.jpg" alt="Song" />
+                <i class="bi playlistPlay bi-play-circle-fill" id="14"></i>
+              </div>
+              <h5>
+                Dastam Ra Begir
+                <br />
+                <div class="subtitle">Motamedi</div>
+              </h5>
+            </li>
+            <li class="songItem">
+              <div class="img-play">
+                <img src="./Image/15.jpg" alt="Song" />
+                <i class="bi playlistPlay bi-play-circle-fill" id="15"></i>
+              </div>
+              <h5>
+                Paridokht
+                <br />
+                <div class="subtitle">Aghili</div>
+              </h5>
+            </li>
+          </div>
+        </div>
+        <div class="popular-artists">
+          <div class="h4">
+            <h4>Popular Artists</h4>
+            <div class="btn-s">
+              <i id="left-scrolls" class="bi bi-arrow-left-short"></i>
+              <i id="right-scrolls" class="bi bi-arrow-right-short"></i>
+            </div>
+          </div>
+          <div class="item">
+            <li>
+              <img src="./Image/artists/1.jpg" alt="Artists" title="59" />
+            </li>
+            <li>
+              <img src="./Image/artists/2.jpg" alt="Artists" title="59" />
+            </li>
+            <li>
+              <img src="./Image/artists/3.jpg" alt="Artists" title="59" />
+            </li>
+            <li>
+              <img src="./Image/artists/4.jpg" alt="Artists" title="59" />
+            </li>
+            <li>
+              <img src="./Image/artists/5.jpg" alt="Artists" title="59" />
+            </li>
+            <li>
+              <img src="./Image/artists/6.jpg" alt="Artists" title="59" />
+            </li>
+            <li>
+              <img src="./Image/artists/7.jpg" alt="Artists" title="59" />
+            </li>
+            <li>
+              <img src="./Image/artists/8.jpg" alt="Artists" title="59" />
+            </li>
+          </div>
+        </div>
+        <div class="overly"></div>
+      </div>
+
+      <div class="master-play">
+        <div class="left">
+          <div class="wave">
+            <div class="wave1"></div>
+            <div class="wave1"></div>
+            <div class="wave1"></div>
+          </div>
+          <img src="./Image/1.jpg" alt="Alan" id="poster-master-play" />
+          <h5 id="title">
+            Mehro Mah <br />
+            <div class="subtitle">Esfahani</div>
+          </h5>
+        </div>
+        <div class="icon">
+          <i class="bi bi-skip-start-fill" id="back"></i>
+          <i class="bi bi-play-fill" id="masterPlay"></i>
+          <i class="bi bi-skip-end-fill" id="next"></i>
+        </div>
+        <div class="center">
+          <span id="currentStart">0:00</span>
+          <div class="bar">
+            <input type="range" id="seek" min="0" value="0" max="100" />
+            <div class="bar2" id="bar2"></div>
+            <div class="dot"></div>
+          </div>
+          <span id="currentEnd">0:00</span>
+        </div>
+        <div class="vol">
+          <i class="bi bi-volume-down-fill" id="vol_icon" onclick="mute()"></i>
+          <input type="range" id="vol" min="0" value="30" max="100" />
+          <div class="vol_bar"></div>
+          <div class="dot" id="vol_dot"></div>
+        </div>
+      </div>
+    </header>
+
+    <script src="./MusicPlayer.js"></script>
+  </body>
+</html>
