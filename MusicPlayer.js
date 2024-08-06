@@ -336,6 +336,6 @@ document.querySelector(".sun").addEventListener("click", (e) => {
   }
 });
 
-
+new Sortable(menuSong, { animation: 350 });
 
 /////////////////////////
